@@ -1,4 +1,4 @@
-# eslint-plugin-valtech
+# eslint-plugin-valtech ![Travis CI](https://travis-ci.org/valtech-nyc/eslint-plugin-valtech.svg?branch=master)
 
 Custom Eslint rules for Valtech JavaScript projects.
 
