@@ -34,6 +34,12 @@ ruleTester.run("react-router-no-literals", rule, {
         },
         {
             code: `<Route path={ROUTES.HOME}>Home</Route>`
+        },
+        {
+            code: `this.props.history.push(ROUTES.HOME);`
+        },
+        {
+            code: `history.push(ROUTES.HOME);`
         }
     ],
 
@@ -58,6 +64,18 @@ ruleTester.run("react-router-no-literals", rule, {
         },
         {
             code: `<Route path={"home"}>Home</Route>`,
+            errors: [{
+                message: rule.errors.NO_LITERAL_ALLOWED_AS_ROUTE_NAME_ERROR
+            }]
+        },
+        {
+            code: `this.props.history.push('home');`,
+            errors: [{
+                message: rule.errors.NO_LITERAL_ALLOWED_AS_ROUTE_NAME_ERROR
+            }]
+        },
+        {
+            code: `history.push('home');`,
             errors: [{
                 message: rule.errors.NO_LITERAL_ALLOWED_AS_ROUTE_NAME_ERROR
             }]

@@ -16,6 +16,10 @@ Examples of **incorrect** code for this rule:
 
 <Link to={"home"}>Home</Link>
 
+this.props.history.push('home');
+
+history.push('home');
+
 ```
 
 Examples of **correct** code for this rule:
@@ -25,5 +29,9 @@ Examples of **correct** code for this rule:
 <Route path={ROUTES.HOME}>Home</Link>
 
 <Link to={ROUTES.HOME}>Home</Link>
+
+this.props.history.push(ROUTES.HOME);
+
+history.push(ROUTES.HOME);
 
 ```
