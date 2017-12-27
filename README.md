@@ -43,9 +43,4 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
-* Fill in provided rules here
-
-
-
-
-
+* [react-router-no-literals](docs/rules/react-router-no-literals.md)
