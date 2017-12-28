@@ -44,3 +44,4 @@ Then configure the rules you want to use under the rules section.
 ## Supported Rules
 
 * [react-router-no-literals](docs/rules/react-router-no-literals.md)
+* [max-length-import-relative-path](docs/rules/max-length-import-relative-path.md)
