@@ -6,7 +6,6 @@ Default exports allow for importing modules with a different name than it was ex
 
 That's why named exports are preferred over default exports in this kind of projects. Also the current tooling benefits from this approach by suggesting modules/components and auto importing them on the fly.
 
-
 ## Rule Details
 
 Examples of **incorrect** code for this rule:
@@ -31,14 +30,6 @@ export class ModuleName {};
 
 ```
 
-### Options
-
-If there are any options, describe them here. Otherwise, delete this section.
-
 ## When Not To Use It
 
-Give a short description of when it would be appropriate to turn off this rule.
-
-## Further Reading
-
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
+If your project is a library then you'll probably want a default import of the whole library namespace.
