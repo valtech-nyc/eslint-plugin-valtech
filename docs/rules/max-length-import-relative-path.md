@@ -2,7 +2,7 @@
 
 Writing `../../` can be a pain when importing modules from relative directories.
 
-Webpack can help by setting the `NODE_PATH` to your `src/` folder and importing relative from the source folder.
+Webpack can help by setting the `NODE_PATH` env variable to your `src/` folder and importing modules relative from the source folder.
 
 ## Rule Details
 
