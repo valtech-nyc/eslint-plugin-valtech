@@ -36,6 +36,20 @@ ruleTester.run("filename-match-default-export", rule, {
         {
             code: "export default Foo;",
             filename: "/components/Foo.js"
+        },
+        {
+            code: "export default Foo;",
+            filename: "/components/foo.js",
+            options: [{
+                exact: false
+            }]
+        },
+        {
+            code: "export default FooBar;",
+            filename: "/components/foo-bar.js",
+            options: [{
+                exact: false
+            }]
         }
     ],
 
@@ -64,6 +78,15 @@ ruleTester.run("filename-match-default-export", rule, {
             errors: [{
                 message: rule.errors.FILENAME_NOT_MATCHING_DEFAULT_EXPORT
                     .replace('{{filename}}', 'foo')
+                    .replace('{{moduleName}}', 'Foo')
+            }]
+        },
+        {
+            code: "export default Foo;",
+            filename: "/components/foo-bar.js",
+            errors: [{
+                message: rule.errors.FILENAME_NOT_MATCHING_DEFAULT_EXPORT
+                    .replace('{{filename}}', 'foo-bar')
                     .replace('{{moduleName}}', 'Foo')
             }]
         }
