@@ -2,6 +2,8 @@
 
 Guarantee that module name and filename match for better maintainability.
 
+> Note: we are ignoring `index.js` files.
+
 ## Rule Details
 
 Examples of **incorrect** code for this rule:

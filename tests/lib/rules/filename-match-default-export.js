@@ -50,6 +50,10 @@ ruleTester.run("filename-match-default-export", rule, {
             options: [{
                 exact: false
             }]
+        },
+        {
+            code: "export default class Foo {};",
+            filename: "/components/index.js"
         }
     ],
 
