@@ -19,14 +19,6 @@ export default Foo;
 // filename: '/components/foo.js'
 export default Foo;
 
-// filename: '/components/foo.js'
-// exact: false
-export default Foo;
-
-// filename: '/components/foo-bar.js'
-// exact: false
-export default FooBar;
-
 ```
 
 Examples of **correct** code for this rule:
@@ -39,13 +31,21 @@ export default class Foo {};
 // filename: '/components/Foo.js'
 export default Foo;
 
+// filename: '/components/foo.js'
+// exact: false
+export default Foo;
+
+// filename: '/components/foo-bar.js'
+// exact: false
+export default FooBar;
+
 ```
 
 ## Options
 
 This rule takes the following option:
 
-`exact`: When set to false the filenames will be striped off of `-`, `_` and turned to lowercase. Default is *true* if the rule is enabled.
+`exact`: When set to false the filenames will be striped off of `-`, `_` and turned to lowercase for comparison with module names. Default is *true* if the rule is enabled.
 
 You can set the option like this:
 
