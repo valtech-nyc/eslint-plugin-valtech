@@ -19,6 +19,15 @@ export default Foo;
 // filename: '/components/foo.js'
 export default Foo;
 
+// filename: "/components/foo-bar.js"
+export default Foo;
+
+// filename: "/components/Bar.js"
+export default connect()(Foo);
+
+// filename: "/components/Bar.js"
+export default connect()(hoc()(Foo));
+
 ```
 
 Examples of **correct** code for this rule:
@@ -38,6 +47,15 @@ export default Foo;
 // filename: '/components/foo-bar.js'
 // exact: false
 export default FooBar;
+
+// filename: "/components/index.js"
+export default class Foo {};
+
+// filename: "/components/Foo.js"
+export default connect()(Foo);
+
+// filename: "/components/Foo.js"
+export default connect()(hoc(Foo));
 
 ```
 

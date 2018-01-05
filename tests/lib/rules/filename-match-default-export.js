@@ -54,6 +54,14 @@ ruleTester.run("filename-match-default-export", rule, {
         {
             code: "export default class Foo {};",
             filename: "/components/index.js"
+        },
+        {
+            code: "export default connect()(Foo);",
+            filename: "/components/Foo.js"
+        },
+        {
+            code: "export default connect()(hoc()(Foo));",
+            filename: "/components/Foo.js"
         }
     ],
 
@@ -91,6 +99,25 @@ ruleTester.run("filename-match-default-export", rule, {
             errors: [{
                 message: rule.errors.FILENAME_NOT_MATCHING_DEFAULT_EXPORT
                     .replace('{{filename}}', 'foo-bar')
+                    .replace('{{moduleName}}', 'Foo')
+            }]
+        },
+        ,
+        {
+            code: "export default connect()(Foo);",
+            filename: "/components/Bar.js",
+            errors: [{
+                message: rule.errors.FILENAME_NOT_MATCHING_DEFAULT_EXPORT
+                    .replace('{{filename}}', 'Bar')
+                    .replace('{{moduleName}}', 'Foo')
+            }]
+        },
+        {
+            code: "export default connect()(hoc()(Foo));",
+            filename: "/components/Bar.js",
+            errors: [{
+                message: rule.errors.FILENAME_NOT_MATCHING_DEFAULT_EXPORT
+                    .replace('{{filename}}', 'Bar')
                     .replace('{{moduleName}}', 'Foo')
             }]
         }
