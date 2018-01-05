@@ -55,7 +55,7 @@ export default class Foo {};
 export default connect()(Foo);
 
 // filename: "/components/Foo.js"
-export default connect()(hoc(Foo));
+export default connect()(hoc()(Foo));
 
 ```
 
@@ -67,4 +67,6 @@ This rule takes the following option:
 
 You can set the option like this:
 
+```
 "valtech/filename-match-default-export": [2, { exact: false }]
+```
