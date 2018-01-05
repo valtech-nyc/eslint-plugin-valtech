@@ -2,6 +2,10 @@
   "name": "eslint-plugin-valtech",
   "version": "0.4.0",
   "description": "Custom Eslint rules for Valtech JavaScript projects.",
+  "repository": "https://github.com/valtech-nyc/eslint-plugin-valtech",
+  "bugs": {
+    "url": "https://github.com/valtech-nyc/eslint-plugin-valtech/issues"
+  },
   "keywords": [
     "eslint",
     "eslintplugin",
