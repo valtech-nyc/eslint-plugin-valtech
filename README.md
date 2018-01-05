@@ -1,4 +1,4 @@
-# eslint-plugin-valtech ![Travis CI](https://travis-ci.org/valtech-nyc/eslint-plugin-valtech.svg?branch=master)
+# eslint-plugin-valtech [![Travis CI](https://travis-ci.org/valtech-nyc/eslint-plugin-valtech.svg?branch=master)](https://travis-ci.org/valtech-nyc/eslint-plugin-valtech)
 
 Custom Eslint rules for Valtech JavaScript projects.
 
@@ -45,3 +45,4 @@ Then configure the rules you want to use under the rules section.
 
 * [react-router-no-literals](docs/rules/react-router-no-literals.md)
 * [filename-match-default-export](docs/rules/filename-match-default-export.md)
+* [max-length-import-relative-path](docs/rules/max-length-import-relative-path.md)
