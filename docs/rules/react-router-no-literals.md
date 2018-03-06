@@ -30,6 +30,8 @@ Examples of **correct** code for this rule:
 
 <Link to={ROUTES.HOME}>Home</Link>
 
+<Route {...props}>Home</Route>
+
 this.props.history.push(ROUTES.HOME);
 
 history.push(ROUTES.HOME);

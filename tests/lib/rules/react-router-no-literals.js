@@ -36,6 +36,9 @@ ruleTester.run("react-router-no-literals", rule, {
             code: `<Route path={ROUTES.HOME}>Home</Route>`
         },
         {
+            code: `<Route {...props}>Home</Route>`
+        },
+        {
             code: `this.props.history.push(ROUTES.HOME);`
         },
         {
